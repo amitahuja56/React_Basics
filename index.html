@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>thenewboston</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="content"></div>
+
+    <script type="text/jsx">
+
+        var AroraComponent = React.createClass({ render: function() { return(
+        <div>
+            <h3>{this.props.user}</h3>
+            <p>{this.props.children}</p>
+        </div>
+        ); } }); React.render(
+        <div>
+            <AroraComponent user="Amit">This guy is awesome</AroraComponent>
+            <AroraComponent user="Jhonny">He smells like mint</AroraComponent>
+        </div>, document.getElementById('content') );
+
+    </script>
+
+</body>
+
+</html>
