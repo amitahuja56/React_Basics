@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Basics</title>
+    <script type="text/javascript" src="../libs/react.js"></script>
+    <script src="../libs/react-dom.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div id="content"></div>
+
+    <script type="text/jsx">
+
+        var AroraComponent = React.createClass({ doSomething: function(){ alert(this.props.children); }, render: function() { return(
+        <div>
+            <h3>{this.props.user}</h3>
+            <a href="#" onClick={this.doSomething}> Click Me</a>
+        </div>
+        ); } }); React.render(
+        <div>
+            <AroraComponent user="Amit">This guy is awesome</AroraComponent>
+            <AroraComponent user="Jhonny">He smells like mint</AroraComponent>
+        </div>, document.getElementById('content') );
+
+    </script>
+
+</body>
+
+</html>
